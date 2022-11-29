@@ -1,5 +1,6 @@
 body {
-  margin: 0;
+  width: 100%;
+  margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -11,3 +12,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.main_container {
+  width: 100%;
+  max-width: 480px;
+margin-bottom: 0;
+margin: auto;
+min-height: calc(100vh - 59px);
+}
+/* Desktop Layout */
+@media only screen and (min-width: 560px ) {
+ .main_container {
+  max-width: 740px;
+  margin: 0 auto;
+ }
+}
+/* End of Desktop Layout */
+
+.main_container>div {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
