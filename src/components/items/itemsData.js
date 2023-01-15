@@ -1,37 +1,54 @@
 export default [
   {
-    imgPath: 'assets/xbox-elite@2x.png',
+    imgPath: 'assets/work_desktop.png',
     productName: 'Work Setup',
     description:
       'Find all products that I use in my work setup. from my 38" ultrawide monitor, to my Airpods Pro.',
     discount: '0',
-    storeLink:
-      'https://www.amazon.com/shop/ialexkpot/list/22BSRJ62EF4T3?&linkCode=sl2&tag=manuelaleja0d-20&linkId=20a7488b12f8a81f0fb084a71f843ff0&language=en_US&ref_=as_li_ss_tl',
+    storeLink: 'https://amzn.to/3Hh2QNy',
   },
   {
-    imgPath: 'assets/desk@2x.png',
-    productName: 'My Gear',
+    imgPath: 'assets/personal_desktop.png',
+    productName: 'Personal Setup',
     description:
-      'Check all my day-to-day products, from my main monitor to the pen I am using.',
+      'Personal means more than coding, what lenses I use, camera gear, wireless charger, wall rgb lights, etc.',
     discount: '0',
-    storeLink: 'https://www.amazon.com/shop/ialexkpot',
+    storeLink: 'https://amzn.to/3h7Nv7i',
   },
   {
-    imgPath: 'assets/leaf@2x.png',
-    productName: 'Wallpapers',
+    imgPath: 'assets/gaming_setup.jpg',
+    productName: 'Gaming Setup',
     description:
-      'A collection of curated wallpapers, some are made by me, others are found only. but all are free for you to use.',
+      'I could not made my mind around what console to buy, so I got both of them. Take a look at that and other accesories as well.',
     discount: '0',
     storeLink:
       'https://drive.google.com/drive/folders/1WM7WSINZAp2UN4uP4I6nG6FHfP4PGdj9',
   },
   {
-    imgPath: 'assets/desk2@2x.png',
+    imgPath: 'assets/grovemade.png',
     productName: 'Grovemade',
     description:
       'Design Inspires, build your dream workspace, so you can get your best work done.',
     discount: '10% Off',
     storeLink: 'https://grovemade.com/?rfsn=4420281.fb68e2',
+  },
+  {
+    imgPath: 'assets/desk.png',
+    productName: 'Autonomous desk',
+    description:
+      'USE code: 22ALEJANDRO for an special discount on any Autonomous product.',
+    discount: '0',
+    storeLink:
+      'https://www.autonomous.ai/standing-desks/smartdesk-2-business?utm_source=pr&utm_medium=influencer&utm_campaign=growth&utm_content=Instagram&utm_term=22ALEJANDRO',
+  },
+  {
+    imgPath: 'assets/wallpapers.jpg',
+    productName: 'Wallpapers',
+    description:
+      'A collection of curated wallpapers, some are made by me, others are found only. but all are free for you to use.',
+    discount: '0',
+    storeLink:
+      'https://drive.google.com/drive/folders/1WM7WSINZAp2UN4uP4I6nG6FHfP4PGdj9?usp=sharing',
   },
   {
     imgPath: 'assets/vs-code@2x.png',
