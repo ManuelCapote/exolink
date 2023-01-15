@@ -1,104 +1,78 @@
 div.link-item-container {
- display: flex;
- flex-direction: row;
- margin-bottom: 15px;
- margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  height: 100px;
 }
 
 .leftbox {
- width: fit-content;
- border-radius: 15px;
+  width: fit-content;
+  border-radius: 15px;
 }
 
 .leftbox img {
- width: 79px;
- padding: 0;
+  width: 79px;
+  padding: 0;
 }
 
 .rightbox {
- margin-left: 20px;
+  margin-left: 20px;
 }
 
 .rightbox h2 {
- font-size: 1em;
- text-align: left;
- line-height: 19px;
- font-weight: bold;
- font-family: Helvetica;
- margin-top: 0;
- margin-bottom: 0;
+  font-size: 1em;
+  text-align: left;
+  line-height: 19px;
+  font-weight: bold;
+  font-family: Helvetica;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 61%;
 }
 
 .row-1 {
- display: flex;
- flex-direction: row;
- align-items: top;
- padding-top: 3px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 3px;
+  justify-content: left;
 }
 
 .discount {
- margin-top: 0;
- height: 19px;
- margin-left: 8px;
- display: inline;
- width: fit-content;
- padding-left: 4px;
- padding-right: 4px;
- background-color: #000;
- border-radius: 3px;
- font-size: 12px;
- font-weight: bold;
- color: white;
- line-height: 19px;
+  width: 60px;
+  margin-top: 0;
+  padding: 5px;
+  background-color: #000;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  line-height: 19px;
+  text-align: center;
+  width: fit-content;
+  position: relative;
+  margin-left: 5px;
 }
 
 .rightbox p {
- color: #626060;
- line-height: 15px;
- font-size: 12px;
- text-align: left;
- font-family: helvetica;
- margin-top: 2px;
- width: 90%;
-
+  color: #626060;
+  line-height: 15px;
+  font-size: 12px;
+  text-align: left;
+  font-family: helvetica;
+  margin-top: 2px;
+  width: 90%;
+  overflow: hidden;
+  height: 45px;
 }
 
 .desktop {
- display: none;
+  display: none;
 }
 
 a.linkPath {
- text-decoration: none;
- color: inherit;
-}
-
-
-/* Desktop Layout */
-
-@media only screen and (min-width: 560px) {
- .mobile {
-  display: none;
- }
-
- .desktop {
-  display: block;
- } 
-
- .rightbox {
-  width: 60%;
-  margin-left: 30px;
- }
-
- .rightbox p {
-  width: 100%;
- }
-
- .discount {
-  margin-left: 0;
-  margin: auto;
-  padding: 15px;
-  font-size: 15px;
- }
-
-
+  text-decoration: none;
+  color: inherit;
 }

@@ -1,11 +1,12 @@
 export default [
   {
     imgPath: 'assets/xbox-elite@2x.png',
-    productName: 'Xbox Elite Wireless Controller',
+    productName: 'Work Setup',
     description:
-      'Experience the Xbox Elite Wireless Controller Series 2 featuring adjustable-tension thumbsticks, wrap-around rubberized grip, and shorter hair trigger locks.',
-    discount: '10% Off',
-    storeLink: 'https://amzn.to/3hJgJ93',
+      'Find all products that I use in my work setup. from my 38" ultrawide monitor, to my Airpods Pro.',
+    discount: '0',
+    storeLink:
+      'https://www.amazon.com/shop/ialexkpot/list/22BSRJ62EF4T3?&linkCode=sl2&tag=manuelaleja0d-20&linkId=20a7488b12f8a81f0fb084a71f843ff0&language=en_US&ref_=as_li_ss_tl',
   },
   {
     imgPath: 'assets/desk@2x.png',
