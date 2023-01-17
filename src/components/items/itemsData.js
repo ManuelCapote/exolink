@@ -16,7 +16,7 @@ export default [
     storeLink: 'https://amzn.to/3h7Nv7i',
   },
   {
-    imgPath: 'assets/gaming_setup.jpg',
+    imgPath: 'assets/gaming_setup.png',
     productName: 'Gaming Setup',
     description:
       'I could not made my mind around what console to buy, so I got both of them. Take a look at that and other accesories as well.',

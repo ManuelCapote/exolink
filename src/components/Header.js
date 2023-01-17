@@ -1,3 +1,4 @@
+import { getDefaultNormalizer } from '@testing-library/react'
 import './HeaderStyle.css'
 
 // Assets Import
@@ -58,7 +59,11 @@ function Header(props) {
               />
             </a>
           </div>
-          <p>{user.description}</p>
+          <p>
+            <b>alexkpot.social@gmail.com</b>
+            <br />
+            {user.description}
+          </p>
           <div className='openForJob'>{openForWork()}</div>
         </div>
       </div>
