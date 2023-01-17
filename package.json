@@ -1,7 +1,7 @@
 {
   "name": "exolink",
   "version": "0.1.0",
-  "homepage": "https://manuelcapote.github.io/exolink",
+  "homepage": "https://ManuelCapote.github.io/exolink",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
