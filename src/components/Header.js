@@ -1,13 +1,18 @@
 import { getDefaultNormalizer } from '@testing-library/react'
 import './HeaderStyle.css'
-
+import RectangleImgPlus from '../assets/images/plus.png'
+import RectangleImgMinus from '../assets/images/Rectangle 2@2x.png'
+import userImg from '../assets/images/user-img@2x.png'
+import triangleImg1 from '../assets/images/Polygon 1@2x.png'
+import triangleImg2 from '../assets/images/Polygon 2@2x.png'
+import lineImg from '../assets/images/Line 3@2x.png'
 // Assets Import
 
 function Header(props) {
   const user = {
     firstName: 'Alex',
     lastName: 'kpot',
-    profileImgPath: 'assets/user-img@2x.png',
+    profileImgPath: { triangleImg2 },
     description:
       'Developer, product manager, photographer, content creator, freelancer, and a forever student. I love to build and create things.',
     freelance: false,
@@ -19,14 +24,14 @@ function Header(props) {
     if (user.freelance) {
       return (
         <p className='ofj-p'>
-          <img src='assets/plus.png' alt='plus icon' /> Accepting{' '}
+          <img src={RectangleImgPlus} alt='plus icon' /> Accepting{' '}
           <span>freelance projects</span>
         </p>
       )
     } else {
       return (
         <p className='ofj-p'>
-          <img src='assets/Rectangle 2@2x.png' alt='' /> Not accepting{' '}
+          <img src={RectangleImgMinus} alt='' /> Not accepting{' '}
           <span>freelance projects</span>
         </p>
       )
@@ -37,7 +42,7 @@ function Header(props) {
     <div>
       <div className='header_container'>
         <div className='user_profile'>
-          <img src='assets/user-img@2x.png' alt='Profile Image' />
+          <img src={userImg} alt='Profile Image' />
         </div>
         <div className='user_description'>
           <h1>
@@ -46,17 +51,9 @@ function Header(props) {
           </h1>
           <div className='ig_link'>
             <a href='{igLink}' target='_blank' rel='noopener noreferrer'>
-              <img
-                className='triangle'
-                src='assets/Polygon 1@2x.png'
-                alt='triangle'
-              />{' '}
+              <img className='triangle' src={triangleImg1} alt='triangle' />{' '}
               {user.igName}{' '}
-              <img
-                className='triangle'
-                src='assets/Polygon 2@2x.png'
-                alt='triangle'
-              />
+              <img className='triangle' src={triangleImg2} alt='triangle' />
             </a>
           </div>
           <p>
@@ -67,7 +64,7 @@ function Header(props) {
           <div className='openForJob'>{openForWork()}</div>
         </div>
       </div>
-      <img className='divider' src='assets/Line 3@2x.png' alt='' />
+      <img className='divider' src={lineImg} alt='' />
     </div>
   )
 }

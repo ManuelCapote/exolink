@@ -1,6 +1,5 @@
 import React from 'react'
 import Discount from '../Discount'
-
 // Style Import
 import './LinkItemStyle.css'
 
