@@ -1,15 +1,15 @@
 div.footer-box {
- background-color: #070707;
- height: 29px;
-color: white;
-text-align: center;
-font-family: helvetica;
-line-height: 0;
-font-size: 9px;
-text-align: center;
-font-weight: bold;
-display: flex;
-justify-content: center;
-align-items: center;
-width: 100vw;
+  background-color: var(--footer-bg);
+  height: 29px;
+  color: var(--footer-text);
+  text-align: center;
+  font-family: helvetica;
+  line-height: 0;
+  font-size: 9px;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
