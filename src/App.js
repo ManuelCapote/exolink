@@ -3,6 +3,9 @@ import Links from './components/Links'
 import Footer from './components/Footer'
 import itemsData from './components/items/itemsData'
 import useLocalStorage from 'use-local-storage'
+import toggleThemeWhite from './assets/images/darkModeToggleOff.svg'
+import toggleThemeDark from './assets/images/darkModeToggleOn.svg'
+import { useState } from 'react'
 
 function App() {
   const itemsDataList = itemsData
@@ -11,16 +14,22 @@ function App() {
     'theme',
     defaultDark ? 'dark' : 'light'
   )
+  const [themeToggle, setThemeToggle] = useState(
+    theme === 'dark' ? toggleThemeDark : toggleThemeWhite
+  )
 
   const switchTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light'
     setTheme(newTheme)
+    setThemeToggle(newTheme === 'dark' ? toggleThemeDark : toggleThemeWhite)
   }
 
   return (
     <div className='app' data-theme={theme}>
-      <button onClick={switchTheme}>switch theme</button>
-      <Header />
+      <button className='toggleBtn' onClick={switchTheme}>
+        <img src={themeToggle} alt='' />
+      </button>
+      <Header isDarkModeOn={theme === 'light' ? false : true} />
       <Links items={itemsDataList} />
       <Footer />
     </div>

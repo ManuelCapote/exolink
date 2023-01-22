@@ -47,3 +47,12 @@ code {
 .app {
   background-color: var(--background);
 }
+
+.toggleBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  left: 430px;
+  top: 50px;
+}
