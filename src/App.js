@@ -26,11 +26,13 @@ function App() {
 
   return (
     <div className='app' data-theme={theme}>
-      <button className='toggleBtn' onClick={switchTheme}>
-        <img src={themeToggle} alt='' />
-      </button>
-      <Header isDarkModeOn={theme === 'light' ? false : true} />
-      <Links items={itemsDataList} />
+      <div className='content'>
+        <button className='toggleBtn' onClick={switchTheme}>
+          <img src={themeToggle} alt='' />
+        </button>
+        <Header isDarkModeOn={theme === 'light' ? false : true} />
+        <Links items={itemsDataList} />
+      </div>
       <Footer />
     </div>
   )

@@ -37,14 +37,22 @@ code {
 }
 
 .main_container {
-  max-width: 480px;
   margin-bottom: 0;
   margin: auto;
-  min-height: calc(100vh - 59px);
+  min-height: 100vh;
 }
 
 .app {
   background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  max-width: 480px;
+  min-height: calc(100vh - 29px);
 }
 
 .toggleBtn {

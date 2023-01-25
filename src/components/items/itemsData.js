@@ -51,7 +51,7 @@ export default [
       'https://drive.google.com/drive/folders/1FOEIdGuVEXlrTaa-utWJ1UlSq_SQU3Qd?usp=share_link',
   },
   {
-    imgPath: require('../../assets/images/vs-code@2x.png'),
+    imgPath: require('../../assets/images/vscode.png'),
     productName: 'VS Code Theme',
     description:
       'A bright, modern, contrasting dark theme for Visual Studio Code by @morgan.codes',
