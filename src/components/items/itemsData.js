@@ -45,10 +45,10 @@ export default [
     imgPath: require('../../assets/images/wallpapers.jpg'),
     productName: 'Wallpapers',
     description:
-      'A collection of curated wallpapers, some are made by me, others are found only. but all are free for you to use.',
+      'A collection of curated wallpapers, some are made by me, others are form the internet. But all are free for you to use.',
     discount: '0',
     storeLink:
-      'https://drive.google.com/drive/folders/1WM7WSINZAp2UN4uP4I6nG6FHfP4PGdj9?usp=sharing',
+      'https://drive.google.com/drive/folders/1FOEIdGuVEXlrTaa-utWJ1UlSq_SQU3Qd?usp=share_link',
   },
   {
     imgPath: require('../../assets/images/vs-code@2x.png'),
