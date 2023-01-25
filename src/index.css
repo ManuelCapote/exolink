@@ -37,7 +37,6 @@ code {
 }
 
 .main_container {
-  width: 95%;
   max-width: 480px;
   margin-bottom: 0;
   margin: auto;
@@ -52,7 +51,9 @@ code {
   background: transparent;
   border: none;
   cursor: pointer;
+  display: block;
+  margin-left: auto;
+  top: 20px;
+  right: 20px;
   position: relative;
-  left: 430px;
-  top: 50px;
 }
