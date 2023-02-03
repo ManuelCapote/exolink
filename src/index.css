@@ -1,3 +1,26 @@
+/* App Themes */
+:root {
+  --background: white;
+  --text-primary: #121212;
+  --text-secondary: #626060;
+  --accent: black;
+  --footer-bg: #070707;
+  --footer-text: white;
+  --discount-bg: black;
+  --discount-text: white;
+}
+
+[data-theme='dark'] {
+  --background: #121212;
+  --text-primary: white;
+  --text-secondary: #dbdbdb;
+  --accent: white;
+  --footer-bg: white;
+  --footer-text: black;
+  --discount-bg: white;
+  --discount-text: black;
+}
+
 body {
   width: 100%;
   margin: 0 auto;
@@ -14,9 +37,31 @@ code {
 }
 
 .main_container {
-  width: 95%;
-  max-width: 480px;
   margin-bottom: 0;
   margin: auto;
-  min-height: calc(100vh - 59px);
+  min-height: 100vh;
+}
+
+.app {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  max-width: 480px;
+  min-height: calc(100vh - 29px);
+}
+
+.toggleBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  top: 20px;
+  right: 20px;
+  position: relative;
 }

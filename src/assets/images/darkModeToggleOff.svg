@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="22.27" viewBox="0 0 14.179 15.73">
+  <g id="Group_9" data-name="Group 9" transform="translate(-449.88 -16.27)">
+    <g id="Group_6" data-name="Group 6" transform="translate(0 -3.607)">
+      <g id="Group_5" data-name="Group 5" transform="matrix(0.996, 0.087, -0.087, 0.996, 447.666, 15.449)">
+        <path id="Subtraction_1" data-name="Subtraction 1" d="M-120.657,205.152a5.758,5.758,0,0,1-4.664-2.393,5.717,5.717,0,0,0,.839.062,5.724,5.724,0,0,0,5.457-3.967,5.767,5.767,0,0,0-.794-5.119,5.736,5.736,0,0,1,3.49,1.909,5.736,5.736,0,0,1,1.411,3.769A5.745,5.745,0,0,1-120.657,205.152Z" transform="translate(131.714 -189.849)" fill="#121212"/>
+      </g>
+    </g>
+    <path id="Path_1" data-name="Path 1" d="M0,0H8" transform="translate(450.38 31.5)" fill="none" stroke="#121212" stroke-linecap="round" stroke-width="1"/>
+  </g>
+</svg>
