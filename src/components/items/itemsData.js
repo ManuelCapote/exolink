@@ -1,4 +1,12 @@
-export default [
+const LinksData = [
+  {
+    imgPath: require('../../assets/images/camera-clamp.png'),
+    productName: 'Camera Clamp',
+    description:
+      'YAYOYA Super Clamp with 360° Ballhead Articulating Friction Magic Arm, 22in/55cm Adjustable Magic Arm Camera Mount with Both 1/4" Thread Screw for LCD Monitor',
+    discount: '0',
+    storeLink: 'https://amzn.to/3HvLHxP',
+  },
   {
     imgPath: require('../../assets/images/work_desktop.png'),
     productName: 'Work Setup',
@@ -60,3 +68,5 @@ export default [
       'https://marketplace.visualstudio.com/items?itemName=morgan-codes.morgan-codes-vscode-theme',
   },
 ]
+
+export default LinksData

@@ -65,13 +65,14 @@ function Header(props) {
 
   useEffect(() => {
     handleDarkMode()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDarkModeOn])
 
   return (
     <div>
       <div className='header_container'>
         <div className='user_profile'>
-          <img src={userImg} alt='Profile Image' />
+          <img src={userImg} alt='Profile' />
         </div>
         <div className='user_description'>
           <h1>
@@ -93,7 +94,7 @@ function Header(props) {
           <div className='openForJob'>{openForWork()}</div>
         </div>
       </div>
-      <img className='divider' src={lineImg} alt='' />
+      <img className='divider' src={lineImg} alt='divider' />
     </div>
   )
 }

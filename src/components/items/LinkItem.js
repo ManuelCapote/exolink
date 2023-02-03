@@ -5,7 +5,12 @@ import './LinkItemStyle.css'
 
 function LinkItem(props) {
   return (
-    <a className='linkPath' target='_blank' href={props.item.storeLink}>
+    <a
+      className='linkPath'
+      target='_blank'
+      rel='noreferrer'
+      href={props.item.storeLink}
+    >
       <div className='link-item-container'>
         <div className='leftbox'>
           <img src={props.item.imgPath} alt='' />
