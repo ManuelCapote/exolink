@@ -1,5 +1,14 @@
 const LinksData = [
   {
+    imgPath: require('../../assets/images/benQMonitor.jpg'),
+    productName: 'PD3220U｜32-inch 4K',
+    description:
+      'The PD3220U ships from the factory with default color settings that perfectly match Mac® and MacBookc® Pro laptop colors. Exclusive M-Book mode provides active color syncing, creating an additional layer of color precision assurance.',
+    discount: '0',
+    storeLink:
+      'https://imsva91-ctp.trendmicro.com/wis/clicktime/v1/query?url=https%3a%2f%2fbenqurl.biz%2f3o5Jyn0&umid=CF219F23-FCCC-3105-B370-C911733F7BA0&auth=bd65de9ab001e9263876a02ec49928af70e9b967-0dabbd3d1be9a52e00b894653f9b7741b692afd6',
+  },
+  {
     imgPath: require('../../assets/images/camera-clamp.png'),
     productName: 'Camera Clamp',
     description:
