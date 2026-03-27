@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import Links from './components/Links'
+import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
 import sections from './data/sections.json'
 import profile from './data/profile.json'
@@ -29,6 +30,7 @@ function App() {
         </button>
         <Header profile={profile} isDarkModeOn={isDarkMode} />
         <Links sections={sections} />
+        <ContactForm />
       </main>
       <Footer />
     </div>

@@ -1,0 +1,85 @@
+.contact-section {
+  padding: 0 20px;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.4s ease both;
+  animation-delay: 0.5s;
+}
+
+.contact-title {
+  color: var(--text-primary);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  transition: color 0.3s ease;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: transparent;
+  border: 1.5px solid var(--text-secondary);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color 0.2s ease, color 0.3s ease;
+  resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--text-primary);
+}
+
+.contact-btn {
+  background: var(--accent);
+  color: var(--background);
+  border: none;
+  border-radius: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 24px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: opacity 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-btn:hover {
+  opacity: 0.85;
+}
+
+.contact-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.contact-success {
+  color: var(--text-secondary);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+.contact-success p {
+  margin-bottom: 12px;
+}
+
+.contact-error {
+  color: #e53e3e;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  margin-top: 4px;
+}
