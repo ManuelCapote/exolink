@@ -1,10 +1,7 @@
-import { useState } from 'react'
-import { useEffect } from 'react'
-
 import './HeaderStyle.css'
+import images from '../data/images'
 import RectangleImgPlus from '../assets/images/plus.png'
 import RectangleImgMinus from '../assets/images/Rectangle 2@2x.png'
-import userImg from '../assets/images/user-img@2x.png'
 import triangleImg1 from '../assets/images/Polygon 1@2x.png'
 import triangleImg2 from '../assets/images/Polygon 2@2x.png'
 import lineImg from '../assets/images/Line 3@2x.png'
@@ -12,27 +9,16 @@ import minusW from '../assets/images/minusW.svg'
 import plusW from '../assets/images/plusW.svg'
 import triangleLeft from '../assets/images/triangleLeft.svg'
 import triangleRight from '../assets/images/triangleRight.svg'
-// Assets Import
 
-function Header(props) {
-  const isDarkModeOn = props.isDarkModeOn
-  const [triangleLeftSrc, setTriangleLeftSrc] = useState(triangleImg1)
-  const [triangleRightSrc, setTriangleRightSrc] = useState(triangleImg2)
-  const [minus, setMinus] = useState(RectangleImgMinus)
-  const [plus, setPlus] = useState(RectangleImgPlus)
+function Header({ profile, isDarkModeOn }) {
+  const triangleLeftSrc = isDarkModeOn ? triangleLeft : triangleImg1
+  const triangleRightSrc = isDarkModeOn ? triangleRight : triangleImg2
+  const minus = isDarkModeOn ? minusW : RectangleImgMinus
+  const plus = isDarkModeOn ? plusW : RectangleImgPlus
+  const profileImg = images[profile.profileImage]
 
-  const user = {
-    firstName: 'Alex',
-    lastName: 'kpot',
-    profileImgPath: { userImg },
-    description:
-      'Developer, product manager, photographer, content creator, freelancer, and a forever student. I love to build and create things.',
-    freelance: false,
-    igLink: 'https://www.instagram.com/alexkpot/',
-    igName: '@alexkpot',
-  }
   const openForWork = () => {
-    if (user.freelance) {
+    if (profile.freelance) {
       return (
         <p className='ofj-p'>
           <img src={plus} alt='plus icon' /> Accepting{' '}
@@ -49,47 +35,28 @@ function Header(props) {
     }
   }
 
-  const handleDarkMode = () => {
-    if (isDarkModeOn) {
-      setMinus(minusW)
-      setPlus(plusW)
-      setTriangleLeftSrc(triangleLeft)
-      setTriangleRightSrc(triangleRight)
-    } else {
-      setMinus(RectangleImgMinus)
-      setPlus(RectangleImgPlus)
-      setTriangleLeftSrc(triangleImg1)
-      setTriangleRightSrc(triangleImg2)
-    }
-  }
-
-  useEffect(() => {
-    handleDarkMode()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isDarkModeOn])
-
   return (
     <div>
       <div className='header_container'>
         <div className='user_profile'>
-          <img src={userImg} alt='Profile' />
+          <img src={profileImg} alt='Profile' />
         </div>
         <div className='user_description'>
           <h1>
-            <span className='h1-s1'>{user.firstName}</span>
-            <span className='h1-s2'>{user.lastName}</span>
+            <span className='h1-s1'>{profile.firstName}</span>
+            <span className='h1-s2'>{profile.lastName}</span>
           </h1>
           <div className='ig_link'>
-            <a href={user.igLink} target='_blank' rel='noopener noreferrer'>
+            <a href={profile.social.instagram.url} target='_blank' rel='noopener noreferrer'>
               <img className='triangle' src={triangleLeftSrc} alt='triangle' />{' '}
-              {user.igName}{' '}
+              {profile.social.instagram.handle}{' '}
               <img className='triangle' src={triangleRightSrc} alt='triangle' />
             </a>
           </div>
           <p>
-            <b>alexkpot.social@gmail.com</b>
+            <b>{profile.email}</b>
             <br />
-            {user.description}
+            {profile.description}
           </p>
           <div className='openForJob'>{openForWork()}</div>
         </div>

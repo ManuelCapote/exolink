@@ -1,0 +1,14 @@
+{
+  "firstName": "Alex",
+  "lastName": "kpot",
+  "profileImage": "user-img@2x.png",
+  "email": "alexkpot.social@gmail.com",
+  "description": "Developer, product manager, photographer, content creator, freelancer, and a forever student. I love to build and create things.",
+  "freelance": true,
+  "social": {
+    "instagram": {
+      "url": "https://www.instagram.com/alexkpot/",
+      "handle": "@alexkpot"
+    }
+  }
+}

@@ -1,16 +1,13 @@
-import React from 'react'
-
-// Sub Component Import
 import LinkItem from './items/LinkItem.js'
-
-// Style Import
 import './LinksStyle.css'
 
-function Links(props) {
+function Links({ sections }) {
+  const allItems = sections.flatMap((section) => section.items)
+
   return (
     <div className='main LinksItemContainer'>
-      {props.items.map((item, index) => (
-        <LinkItem key={index} item={item} />
+      {allItems.map((item) => (
+        <LinkItem key={item.id} item={item} />
       ))}
     </div>
   )

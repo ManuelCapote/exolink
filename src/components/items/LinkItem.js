@@ -1,27 +1,26 @@
-import React from 'react'
 import Discount from '../Discount'
-// Style Import
+import images from '../../data/images'
 import './LinkItemStyle.css'
 
-function LinkItem(props) {
+function LinkItem({ item }) {
   return (
     <a
       className='linkPath'
       target='_blank'
       rel='noreferrer'
-      href={props.item.storeLink}
+      href={item.link}
     >
       <div className='link-item-container'>
         <div className='leftbox'>
-          <img src={props.item.imgPath} alt='' />
+          <img src={images[item.image]} alt={item.name} />
         </div>
         <div className='rightbox'>
           <div className='row-1'>
-            <h2>{props.item.productName}</h2>
-            <Discount screen='mobile' value={props.item.discount} />
-            <Discount screen='desktop' value={props.item.discount} />
+            <h2>{item.name}</h2>
+            <Discount screen='mobile' value={item.discount} />
+            <Discount screen='desktop' value={item.discount} />
           </div>
-          <p>{props.item.description}</p>
+          <p>{item.description}</p>
         </div>
       </div>
     </a>
