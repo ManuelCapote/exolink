@@ -15,7 +15,7 @@ function LinkItem({ item, index }) {
         style={{ animationDelay: `${0.3 + index * 0.06}s` }}
       >
         <div className='leftbox'>
-          <img src={images[item.image]} alt={item.name} />
+          <img src={images[item.image]} alt={item.name} loading='lazy' />
         </div>
         <div className='rightbox'>
           <div className='row-1'>

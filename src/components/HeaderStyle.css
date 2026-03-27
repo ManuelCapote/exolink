@@ -51,8 +51,8 @@
   margin-bottom: 0;
   margin-top: 14px;
 }
-span.h1-s2 {
-  font-weight: 200 !important;
+.user_description h1 span.h1-s2 {
+  font-weight: 200;
 }
 
 div.ig_link {
