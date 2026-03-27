@@ -9,8 +9,8 @@ import './LinksStyle.css'
 function Links(props) {
   return (
     <div className='main LinksItemContainer'>
-      {props.items.map((item) => (
-        <LinkItem item={item} />
+      {props.items.map((item, index) => (
+        <LinkItem key={index} item={item} />
       ))}
     </div>
   )

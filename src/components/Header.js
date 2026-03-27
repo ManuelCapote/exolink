@@ -80,7 +80,7 @@ function Header(props) {
             <span className='h1-s2'>{user.lastName}</span>
           </h1>
           <div className='ig_link'>
-            <a href='{igLink}' target='_blank' rel='noopener noreferrer'>
+            <a href={user.igLink} target='_blank' rel='noopener noreferrer'>
               <img className='triangle' src={triangleLeftSrc} alt='triangle' />{' '}
               {user.igName}{' '}
               <img className='triangle' src={triangleRightSrc} alt='triangle' />
