@@ -2,7 +2,7 @@ import Discount from '../Discount'
 import images from '../../data/images'
 import './LinkItemStyle.css'
 
-function LinkItem({ item }) {
+function LinkItem({ item, index }) {
   return (
     <a
       className='linkPath'
@@ -10,7 +10,10 @@ function LinkItem({ item }) {
       rel='noreferrer'
       href={item.link}
     >
-      <div className='link-item-container'>
+      <div
+        className='link-item-container link-item-enter'
+        style={{ animationDelay: `${0.3 + index * 0.06}s` }}
+      >
         <div className='leftbox'>
           <img src={images[item.image]} alt={item.name} />
         </div>

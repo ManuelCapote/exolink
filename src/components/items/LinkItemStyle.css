@@ -1,9 +1,23 @@
 div.link-item-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin-bottom: 15px;
   margin-top: 15px;
-  height: 100px;
+  min-height: 100px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+a.linkPath:hover div.link-item-container {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--hover-shadow);
+}
+
+a.linkPath:active div.link-item-container {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .leftbox {
@@ -24,6 +38,7 @@ div.link-item-container {
 
 .rightbox h2 {
   color: var(--text-primary);
+  transition: color 0.3s ease;
   font-size: 1em;
   text-align: left;
   line-height: 19px;
@@ -61,6 +76,7 @@ div.link-item-container {
 
 .rightbox p {
   color: var(--text-secondary);
+  transition: color 0.3s ease;
   line-height: 15px;
   font-size: 12px;
   text-align: left;

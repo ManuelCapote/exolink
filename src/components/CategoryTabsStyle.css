@@ -6,6 +6,8 @@
   -ms-overflow-style: none;
   padding: 0 20px;
   margin-top: 20px;
+  animation: fadeIn 0.3s ease both;
+  animation-delay: 0.2s;
 }
 
 .category-tabs::-webkit-scrollbar {

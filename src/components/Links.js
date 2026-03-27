@@ -36,8 +36,8 @@ function Links({ sections }) {
         onSelect={handleSelect}
       />
       <div className='main LinksItemContainer'>
-        {items.map((item) => (
-          <LinkItem key={item.id} item={item} />
+        {items.map((item, index) => (
+          <LinkItem key={item.id} item={item} index={index} />
         ))}
       </div>
     </section>

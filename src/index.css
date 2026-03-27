@@ -8,6 +8,7 @@
   --footer-text: white;
   --discount-bg: black;
   --discount-text: white;
+  --hover-shadow: rgba(0, 0, 0, 0.12);
 }
 
 [data-theme='dark'] {
@@ -19,6 +20,7 @@
   --footer-text: black;
   --discount-bg: white;
   --discount-text: black;
+  --hover-shadow: rgba(255, 255, 255, 0.15);
 }
 
 body {
@@ -44,10 +46,12 @@ code {
 
 .app {
   background-color: var(--background);
+  color: var(--text-primary);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 main.content {
@@ -61,6 +65,23 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+/* Entrance animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .toggleBtn {
   background: transparent;
   border: none;
@@ -70,4 +91,7 @@ button:focus-visible {
   top: 20px;
   right: 20px;
   position: relative;
+  padding: 12px;
+  min-width: 44px;
+  min-height: 44px;
 }

@@ -3,3 +3,7 @@
   margin-top: 42px;
   margin-bottom: 42px;
 }
+
+.LinksItemContainer .link-item-enter {
+  animation: fadeInUp 0.3s ease both;
+}

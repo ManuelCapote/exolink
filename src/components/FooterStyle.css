@@ -1,5 +1,6 @@
 footer.footer-box {
   background-color: var(--footer-bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
   height: 29px;
   color: var(--footer-text);
   text-align: center;
