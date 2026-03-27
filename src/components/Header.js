@@ -28,7 +28,7 @@ function Header({ profile, isDarkModeOn }) {
     } else {
       return (
         <p className='ofj-p'>
-          <img src={minus} alt='' /> Not accepting{' '}
+          <img src={minus} alt='' aria-hidden='true' /> Not accepting{' '}
           <span>freelance projects</span>
         </p>
       )
@@ -36,10 +36,10 @@ function Header({ profile, isDarkModeOn }) {
   }
 
   return (
-    <div>
+    <header>
       <div className='header_container'>
         <div className='user_profile'>
-          <img src={profileImg} alt='Profile' />
+          <img src={profileImg} alt={`${profile.firstName} ${profile.lastName}`} />
         </div>
         <div className='user_description'>
           <h1>
@@ -47,10 +47,10 @@ function Header({ profile, isDarkModeOn }) {
             <span className='h1-s2'>{profile.lastName}</span>
           </h1>
           <div className='ig_link'>
-            <a href={profile.social.instagram.url} target='_blank' rel='noopener noreferrer'>
-              <img className='triangle' src={triangleLeftSrc} alt='triangle' />{' '}
+            <a href={profile.social.instagram.url} target='_blank' rel='noopener noreferrer' aria-label='Visit Instagram profile'>
+              <img className='triangle' src={triangleLeftSrc} alt='' aria-hidden='true' />{' '}
               {profile.social.instagram.handle}{' '}
-              <img className='triangle' src={triangleRightSrc} alt='triangle' />
+              <img className='triangle' src={triangleRightSrc} alt='' aria-hidden='true' />
             </a>
           </div>
           <p>
@@ -61,8 +61,8 @@ function Header({ profile, isDarkModeOn }) {
           <div className='openForJob'>{openForWork()}</div>
         </div>
       </div>
-      <img className='divider' src={lineImg} alt='divider' />
-    </div>
+      <img className='divider' src={lineImg} alt='' aria-hidden='true' />
+    </header>
   )
 }
 

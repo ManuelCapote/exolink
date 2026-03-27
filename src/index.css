@@ -50,9 +50,15 @@ code {
   align-items: center;
 }
 
-.content {
+main.content {
   max-width: 480px;
   min-height: calc(100vh - 29px);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 2px;
 }
 
 .toggleBtn {

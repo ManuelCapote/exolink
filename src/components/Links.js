@@ -29,7 +29,7 @@ function Links({ sections }) {
       : sections.find((s) => s.id === activeCategory)?.items || []
 
   return (
-    <div className='links-section'>
+    <section className='links-section'>
       <CategoryTabs
         sections={sections}
         activeId={activeCategory}
@@ -40,7 +40,7 @@ function Links({ sections }) {
           <LinkItem key={item.id} item={item} />
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 

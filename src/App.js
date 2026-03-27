@@ -23,13 +23,13 @@ function App() {
 
   return (
     <div className='app' data-theme={theme}>
-      <div className='content'>
-        <button className='toggleBtn' onClick={switchTheme}>
-          <img src={themeToggle} alt='' />
+      <main className='content'>
+        <button className='toggleBtn' onClick={switchTheme} aria-label='Toggle dark mode'>
+          <img src={themeToggle} alt='Toggle dark mode' />
         </button>
         <Header profile={profile} isDarkModeOn={isDarkMode} />
         <Links sections={sections} />
-      </div>
+      </main>
       <Footer />
     </div>
   )
