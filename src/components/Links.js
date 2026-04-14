@@ -1,22 +1,24 @@
+'use client'
+
 import { useState, useEffect } from 'react'
 import CategoryTabs from './CategoryTabs'
 import LinkItem from './items/LinkItem.js'
 import './LinksStyle.css'
 
 function Links({ sections }) {
-  const getHashCategory = () => {
-    const hash = window.location.hash.replace('#', '')
-    if (hash && sections.some((s) => s.id === hash)) return hash
-    return 'all'
-  }
-
-  const [activeCategory, setActiveCategory] = useState(getHashCategory)
+  const [activeCategory, setActiveCategory] = useState('all')
 
   useEffect(() => {
+    const getHashCategory = () => {
+      const hash = window.location.hash.replace('#', '')
+      if (hash && sections.some((s) => s.id === hash)) return hash
+      return 'all'
+    }
+    setActiveCategory(getHashCategory())
     const onHashChange = () => setActiveCategory(getHashCategory())
     window.addEventListener('hashchange', onHashChange)
     return () => window.removeEventListener('hashchange', onHashChange)
-  }, [])
+  }, [sections])
 
   const handleSelect = (id) => {
     setActiveCategory(id)

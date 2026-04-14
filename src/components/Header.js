@@ -1,20 +1,11 @@
 import './HeaderStyle.css'
 import images from '../data/images'
-import RectangleImgPlus from '../assets/images/plus.png'
-import RectangleImgMinus from '../assets/images/Rectangle 2@2x.png'
-import triangleImg1 from '../assets/images/Polygon 1@2x.png'
-import triangleImg2 from '../assets/images/Polygon 2@2x.png'
-import lineImg from '../assets/images/Line 3@2x.png'
-import minusW from '../assets/images/minusW.svg'
-import plusW from '../assets/images/plusW.svg'
-import triangleLeft from '../assets/images/triangleLeft.svg'
-import triangleRight from '../assets/images/triangleRight.svg'
 
 function Header({ profile, isDarkModeOn }) {
-  const triangleLeftSrc = isDarkModeOn ? triangleLeft : triangleImg1
-  const triangleRightSrc = isDarkModeOn ? triangleRight : triangleImg2
-  const minus = isDarkModeOn ? minusW : RectangleImgMinus
-  const plus = isDarkModeOn ? plusW : RectangleImgPlus
+  const triangleLeftSrc = isDarkModeOn ? '/images/triangleLeft.svg' : '/images/Polygon 1@2x.png'
+  const triangleRightSrc = isDarkModeOn ? '/images/triangleRight.svg' : '/images/Polygon 2@2x.png'
+  const minus = isDarkModeOn ? '/images/minusW.svg' : '/images/Rectangle 2@2x.png'
+  const plus = isDarkModeOn ? '/images/plusW.svg' : '/images/plus.png'
   const profileImg = images[profile.profileImage]
 
   const openForWork = () => {
@@ -61,7 +52,7 @@ function Header({ profile, isDarkModeOn }) {
           <div className='openForJob'>{openForWork()}</div>
         </div>
       </div>
-      <img className='divider' src={lineImg} alt='' aria-hidden='true' />
+      <img className='divider' src='/images/Line 3@2x.png' alt='' aria-hidden='true' />
     </header>
   )
 }

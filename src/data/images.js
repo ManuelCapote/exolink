@@ -1,12 +1,8 @@
-const images = {}
-
-function importAll(r) {
-  r.keys().forEach((key) => {
-    const filename = key.replace('./', '')
-    images[filename] = r(key)
-  })
-}
-
-importAll(require.context('../assets/images', false, /\.(png|jpe?g|svg)$/))
+const images = new Proxy(
+  {},
+  {
+    get: (_, name) => `/images/${name}`,
+  }
+)
 
 export default images
