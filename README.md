@@ -1,8 +1,8 @@
 # ExoLink
 
-A personal link-sharing and product showcase app — a custom alternative to Linktree built with React.
+A personal link-sharing and product showcase app — a custom alternative to Linktree built with Next.js.
 
-**Live:** [kitlink.app](https://kitlink.app/)
+**Live:** https://kitlink-vgfskw6qu-manuelcapotes-projects.vercel.app
 
 ## Features
 
@@ -12,19 +12,20 @@ A personal link-sharing and product showcase app — a custom alternative to Lin
 - **Dark/light mode** with system preference detection and localStorage persistence
 - **Config-driven content** — all profile data, links, and sections live in JSON files for easy editing
 - **Accessible** — semantic HTML, ARIA labels, keyboard navigation with visible focus indicators
-- **SEO-ready** — Open Graph and Twitter Card meta tags
+- **SEO-ready** — Open Graph and Twitter Card meta tags via Next.js metadata API
 
 ## Tech Stack
 
-- React 17 (Create React App)
+- Next.js 16 (App Router) + React 19
 - CSS with CSS custom properties for theming
-- GitHub Pages via `gh-pages`
+- Deployed on Vercel
+- Plausible analytics with outbound link tracking
 
 ## Getting Started
 
 ```bash
 npm install
-npm start
+npm run dev
 ```
 
 Runs at [http://localhost:3000](http://localhost:3000).
@@ -39,30 +40,37 @@ All content is managed through JSON config files in `src/data/`:
 | `sections.json` | Link categories and items (name, description, image, link, discount) |
 | `site.json` | Site title, meta description, OG image |
 
-Images are placed in `src/assets/images/` and referenced by filename in the JSON.
+Images are placed in `public/images/` and referenced by filename in the JSON.
 
 ## Project Structure
 
 ```
+public/
+  images/               # Product and UI images
 src/
-  data/           # JSON config files + image loader
-  assets/images/  # Product and UI images
+  app/
+    layout.jsx          # Root layout + metadata
+    page.jsx            # Home page
+    globals.css         # Global styles
+  data/                 # JSON config files + image path helper
   components/
-    Header.js         # Profile section
-    CategoryTabs.js   # Tab bar for filtering sections
-    Links.js          # Items list with tab filtering
+    Header.js           # Profile section
+    CategoryTabs.js     # Tab bar for filtering sections
+    Links.js            # Items list with tab filtering
     items/
-      LinkItem.js     # Individual product card
-    Discount.js       # Conditional discount badge
-    Footer.js         # Copyright footer
-  App.js              # Root component, theme management
-  index.js            # Entry point
+      LinkItem.js       # Individual product card
+    Discount.js         # Conditional discount badge
+    Footer.js           # Copyright footer
+    ErrorBoundary.js    # Client error boundary
+  App.js                # Root component, theme management
 ```
 
 ## Deployment
 
-```bash
-npm run deploy
-```
+Connected to Vercel via GitHub. Pushes to `main` deploy automatically.
 
-Builds and deploys to GitHub Pages.
+Manual deploy:
+
+```bash
+vercel --prod
+```

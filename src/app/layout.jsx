@@ -1,8 +1,12 @@
 import Script from 'next/script'
 import './globals.css'
 
+const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : 'http://localhost:3000'
+
 export const metadata = {
-  metadataBase: new URL('https://kitlink.app'),
+  metadataBase: new URL(siteUrl),
   title: 'Alexkpot Links',
   description:
     'Developer, photographer, content creator. Find all my recommended products, setups, and links.',
@@ -17,16 +21,16 @@ export const metadata = {
     title: 'Alexkpot Links',
     description:
       'Developer, photographer, content creator. Find all my recommended products, setups, and links.',
-    url: 'https://kitlink.app/',
+    url: '/',
     type: 'website',
-    images: ['https://kitlink.app/AlexKpot-Logo.png'],
+    images: ['/AlexKpot-Logo.png'],
   },
   twitter: {
     card: 'summary',
     title: 'Alexkpot Links',
     description:
       'Developer, photographer, content creator. Find all my recommended products, setups, and links.',
-    images: ['https://kitlink.app/AlexKpot-Logo.png'],
+    images: ['/AlexKpot-Logo.png'],
   },
 }
 
